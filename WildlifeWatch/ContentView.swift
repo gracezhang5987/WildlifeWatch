@@ -9,13 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Wildlife Watchers")
-        }
-        .padding()
+            NavigationStack {
+                VStack {
+                    Text("animal")
+                    NavigationLink(destination: animal1()) {
+                            Text("animal1!")
+                    }
+                    .navigationTitle("Home")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarHidden(true)
+
+
+                    }
+                }
     }
 }
 
